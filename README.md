@@ -32,6 +32,7 @@ Now using emacs -nw (-nw to run it in console window) we can start using emacs.
 ## Configuration
 To start off we need to install packages, to access all packages we need to add melpa. This can be done by editing/adding the file ~/.emacs to contain
 ```
+(package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 ```
@@ -42,4 +43,4 @@ Restarting and opening list-packages should now give you more options. Install t
 * magit : Allows for quick and easy git management.
 * smex : IDE for M-x interface.
 
-  Now copy the .emacs file from this repo to ~/.emacs and restart emacs. Emacs should now be fully configured.
+  Now copy the .emacs file from this repo to ~/.emacs and restart emacs. Press "y" two times and now Emacs shouldbe fully configured.
