@@ -52,3 +52,10 @@
     (gh-md-render-buffer)))
 
 (add-hook 'after-save-hook 'markdown_render_on_save)
+
+
+(require 'ansi-color)
+(defun my/ansi-colorize-buffer ()
+  (let ((buffer-read-only nil))
+    (ansi-color-apply-on-region (point-min) (point-max))))
+(add-hook 'compilation-filter-hook 'my/ansi-colorize-buffer)
